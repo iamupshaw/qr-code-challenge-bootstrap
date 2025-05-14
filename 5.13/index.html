@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    input[type="text"], input[type="number"] {
+      padding: 5px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 6px 12px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-top: 5px;
+    }
+    #total {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Dynamic Shopping Cart</h1>
+  <input type="text" id="chips" placeholder="Product Name" />
+  <input type="number" id="3.99" placeholder="Product Price" />
+  <button onclick="addProduct()">Add Product</button>
+
+  <ul id="product-list"></ul>
+  <div id="total">Total: $0</div>
+
+  <script>
+    let total = 0;
+
+    function addProduct() {
+      const nameInput = document.getElementById("product-name");
+      const priceInput = document.getElementById("product-price");
+
+      const name = nameInput.value.trim();
+      const price = parseFloat(priceInput.value);
+
+      if (!name || isNaN(price) || price < 0) {
+        alert("Please enter a valid product name and price.");
+        return;
+      }
+
+      const productList = document.getElementById("product-list");
+      const li = document.createElement("li");
+      li.textContent = `${name} - $${price.toFixed(2)}`;
+      productList.appendChild(li);
+
+      total += price;
+      document.getElementById("total").textContent = `Total: $${total.toFixed(2)}`;
+
+      nameInput.value = "";
+      priceInput.value = "";
+    }
+  </script>
+
+</body>
+</html>
