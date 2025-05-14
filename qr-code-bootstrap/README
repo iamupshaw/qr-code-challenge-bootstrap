@@ -1,0 +1,18 @@
+# QR Code Component – Bootstrap Refactor
+
+This is a refactored version of the QR Code Component challenge from Frontend Mentor. The project was updated to use **Bootstrap 5** for styling and layout.
+
+## 🔗 Live Preview
+[View Live](https://iamupshaw.github.io/qr-code-challenge-bootstrap/)
+
+## 🧰 Technologies Used
+- HTML5
+- Bootstrap 5
+
+## 🎯 Objectives
+- Replace custom CSS with Bootstrap utility classes
+- Use Bootstrap’s card component for layout
+- Ensure responsive and mobile-friendly design
+
+## 💾 Repository
+[GitHub Repo](https://github.com/iamupshaw/qr-code-challenge-bootstrap)
