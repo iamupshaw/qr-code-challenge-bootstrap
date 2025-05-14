@@ -1,3 +1,11 @@
+qr-code-challenge-bootstrap/
+│
+├── index.html
+├── images/
+│   └── image-qr-code.png
+├── README.md
+└── (Optional) style.css
+
 /* Import Outfit font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
 
@@ -70,3 +78,6 @@
 ├── README.md
 └── (Optional) style.css
 
+qr-code-challenge-bootstrap/
+└── images/
+    └── image-qr-code.png
